@@ -4,7 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class media extends Model
+class Media extends Model
 {
-    //
+    // Relationships
+    public function post()
+    {
+        return $this->belongsTo(Post::class);
+    }
 }
