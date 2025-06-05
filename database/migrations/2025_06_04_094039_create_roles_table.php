@@ -10,7 +10,7 @@ class CreateRolesTable extends Migration
     {
         Schema::create('roles', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->notNullable();
+            $table->string('role_name')->notNullable();
             $table->timestamps();
         });
     }
