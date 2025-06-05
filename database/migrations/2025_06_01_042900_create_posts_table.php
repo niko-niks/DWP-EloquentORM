@@ -18,7 +18,7 @@ return new class extends Migration
         $table->string('slug')->notNullable();
         $table->timestamp('publication_date')->nullable();
         $table->timestamp('last_modified_date')->nullable();
-        $table->string('status')->notNullable()->comment('D - Draft, P - Published, I - Inactive');
+        $table->string('status')->notNullable()->comment('D - Draft, P - Published, I - Inactive')->max(1);
         $table->string('featured_image_url')->notNullable();
         $table->integer('views_count')->notNullable()->default(0);
     });

@@ -11,11 +11,11 @@ class CreateMediaTable extends Migration
         Schema::create('media', function (Blueprint $table) {
             $table->id();
             $table->string('file_name')->notNullable();
-            $table->string('file_type')->notNullable();
+            $table->string('file_type')->notNullable()->max(10);
             $table->integer('file_size')->nullable();
             $table->string('url')->notNullable();
             $table->timestamp('upload_date')->notNullable();
-            $table->string('description')->notNullable();
+            $table->string('description')->Nullable();
             $table->foreignId('post_id')->constrained()->onDelete('cascade');
         });
     }
